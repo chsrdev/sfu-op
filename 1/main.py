@@ -31,8 +31,9 @@ def f(x: int) -> None:
         print('Число не является автоморфным или триморфным')
 
 
-try:
-    num: int = int(input('Введите число: '))
-    f(num)
-except ValueError:
-    print('Введено не число')
+while True:
+    try:
+        num: int = int(input('Введите число: '))
+        f(num)
+    except ValueError:
+        print('Введено не число')
