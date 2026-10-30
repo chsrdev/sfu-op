@@ -1,3 +1,4 @@
+"""Модуль класса рисунка"""
 from image import Image
 
 class Drawing(Image):

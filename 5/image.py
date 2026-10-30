@@ -1,3 +1,4 @@
+"""Модуль базового класса изображения"""
 class Image:
     """Базовый класс изображения"""
     def __init__(self, title: str, width: int, height: int):

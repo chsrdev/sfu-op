@@ -1,3 +1,4 @@
+"""Модуль меню программы"""
 from gallery import Gallery
 from drawing import Drawing
 from photo import Photo
@@ -5,13 +6,14 @@ from image import Image
 from screenshot import Screenshot
 
 def gallery_menu(gallery: Gallery):
+    """Меню показа изображений из галереии"""
     current_idx = 0
     while True:
         if len(gallery) == 0:
             print("Галерея пуста\n"
                   "Добавьте хотя бы одно изображение")
             return
-        
+
         print(gallery[current_idx])
         action = input("\n1. Следующее изображение\n"
                        "2. Предыдущее изображение\n"
@@ -33,6 +35,7 @@ def gallery_menu(gallery: Gallery):
 
 
 def image_create_menu() -> Image:
+    """Меню создания нового изображения"""
     while True:
         try:
             title = input("\nВведите название изображения: ").strip()
@@ -60,7 +63,8 @@ def image_create_menu() -> Image:
                 case 2:
                     size = int(input("Введите вес фотографии (КБ.): "))
                     if size <= 0:
-                        print("Вес фотографии должен быть положительным числом")
+                        print("Вес фотографии должен быть "
+                              "положительным числом")
                         continue
                     camera = input("Введите название камеры: ")
                     return Photo(title, width, height, size, camera)
@@ -78,6 +82,7 @@ def image_create_menu() -> Image:
 
 
 def main_menu(gallery: Gallery):
+    """Основное меню"""
     while True:
         action = input("\n1. Посмотреть галерею\n"
                        "2. Добавить изображение\n"

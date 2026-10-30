@@ -1,3 +1,4 @@
+"""Модуль класса галереи"""
 from image import Image
 
 class Gallery:
